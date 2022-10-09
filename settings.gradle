@@ -1,0 +1,17 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        maven {
+            url 'https://maven.google.com/'
+        }
+    }
+    plugins {
+        id 'com.android.application' version '7.1.0-alpha11'
+        id 'com.android.library' version '7.1.0-alpha11'
+
+    }
+}
+
+rootProject.name = "Hustar_Project_BMK"
+include ':app'

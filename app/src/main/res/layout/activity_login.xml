@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login">
+
+    <LinearLayout
+        android:id="@+id/login_main_Linear"
+        android:layout_width="411dp"
+        android:layout_height="729dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="Suspicious0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_back_sign"
+                android:layout_width="57dp"
+                android:layout_height="63dp"
+                android:background="#00ff0000"
+                android:text="back"
+                android:textColor="#757575" />
+
+            <TextView
+                android:id="@+id/login_txt"
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:layout_gravity="clip_horizontal|center|center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="BookMarK"
+                android:textColor="#040303"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:gravity="center"
+                android:text="회원 로그인"
+                android:textColor="#201F1F"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="23dp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                app:srcCompat="@drawable/book" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="31dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="64dp"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/txt_id"
+                    android:layout_width="254dp"
+                    android:layout_height="51dp"
+                    android:layout_marginLeft="10sp"
+                    android:background="@drawable/txt_line_cutstom"
+                    android:ems="10"
+                    android:hint="아이디"
+                    android:inputType="textPersonName"
+                    android:textSize="20sp" />
+
+                <Space
+                    android:layout_width="80dp"
+                    android:layout_height="51dp" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <Space
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/txt_pwd"
+                    android:layout_width="254dp"
+                    android:layout_height="51dp"
+                    android:background="@drawable/txt_line_cutstom"
+                    android:ems="10"
+                    android:hint="비밀번호"
+                    android:inputType="textPassword"
+                    android:textSize="20sp" />
+
+                <Space
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="39dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="66dp"
+                android:layout_height="48dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/login"
+                android:layout_width="265dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_custom"
+                android:text="로그인"
+                android:textColor="#FAF6F6"
+                android:textSize="20sp" />
+
+            <Space
+                android:layout_width="73dp"
+                android:layout_height="49dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

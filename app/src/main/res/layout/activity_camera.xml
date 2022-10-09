@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".camera">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_back_sign"
+                android:layout_width="57dp"
+                android:layout_height="55dp"
+                android:background="#00ff0000"
+                android:text="back"
+                android:textColor="#757575" />
+
+            <TextView
+                android:id="@+id/login_txt2"
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:layout_gravity="clip_horizontal|center|center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="BookMarK"
+                android:textColor="#040303"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:hint="책 화면을 촬영을 위해서 카메라 아이콘을 클릭해주세요"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/Click_img"
+                android:layout_width="match_parent"
+                android:layout_height="294dp"
+                app:srcCompat="@drawable/camera_icon" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="22dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="330dp"
+                    android:layout_height="match_parent"
+                    android:progressDrawable="@drawable/pro_custom" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Space
+                        android:layout_width="106dp"
+                        android:layout_height="match_parent" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/capture"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/btn_custom"
+                        android:text="촬영"
+                        android:textColor="#FAF6F6"
+                        android:visibility="invisible"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="104dp"
+                        android:layout_height="match_parent" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/upload"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/btn_custom"
+                        android:text="업로드"
+                        android:textColor="#FAF6F6"
+                        android:visibility="invisible"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Space
+                    android:layout_width="104dp"
+                    android:layout_height="match_parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/result"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/btn_custom"
+                    android:text="결과"
+                    android:visibility="invisible"
+                    android:textColor="#FAF6F6"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

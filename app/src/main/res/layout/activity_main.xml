@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/main_Linear"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="55dp" />
+
+        <TextView
+            android:id="@+id/logo_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="BookMarK"
+            android:textColor="#120101"
+            android:textSize="70sp"
+            android:textStyle="bold" />
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="57dp" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            app:srcCompat="@drawable/book" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="178dp"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <LinearLayout
+                android:id="@+id/login_Linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/login"
+                    android:layout_width="265dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_custom"
+                    android:text="로그인"
+                    android:textColor="#FAF6F6"
+                    android:textSize="20sp" />
+
+                <Space
+                    android:layout_width="58dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
+
+            <LinearLayout
+                android:id="@+id/sign_up_Linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/signup"
+                    android:layout_width="265dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_custom"
+                    android:text="회원가입"
+                    android:textColor="#FBFBFB"
+                    android:textSize="20sp" />
+
+                <Space
+                    android:layout_width="58dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
