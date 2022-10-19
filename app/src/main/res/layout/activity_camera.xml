@@ -53,9 +53,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="22dp" />
 
+            <TextView
+                android:id="@+id/textupload"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:visibility="invisible"
+                android:text="파일 업로드 중입니다.." />
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <Space
@@ -83,6 +91,10 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="82dp" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -90,17 +102,6 @@
                     <Space
                         android:layout_width="106dp"
                         android:layout_height="match_parent" />
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/capture"
-                        android:layout_width="200dp"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="30dp"
-                        android:background="@drawable/btn_custom"
-                        android:text="촬영"
-                        android:textColor="#FAF6F6"
-                        android:visibility="invisible"
-                        android:textSize="20sp" />
 
                 </LinearLayout>
 
@@ -120,7 +121,6 @@
                         android:background="@drawable/btn_custom"
                         android:text="업로드"
                         android:textColor="#FAF6F6"
-                        android:visibility="invisible"
                         android:textSize="20sp" />
 
                 </LinearLayout>
@@ -142,7 +142,6 @@
                     android:layout_marginTop="30dp"
                     android:background="@drawable/btn_custom"
                     android:text="결과"
-                    android:visibility="invisible"
                     android:textColor="#FAF6F6"
                     android:textSize="20sp" />
 

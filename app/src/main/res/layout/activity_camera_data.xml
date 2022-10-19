@@ -12,49 +12,74 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/image_view"
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="394dp"
-            android:layout_marginBottom="10dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:layout_height="33dp" />
+
+        <TextView
+            android:id="@+id/login_txt4"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:layout_gravity="clip_horizontal|center|center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="BookMarK"
+            android:textColor="#040303"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="책 판정 결과"
+            android:textSize="17sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/txt1"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
+            <ImageView
+                android:id="@+id/dect1"
+                android:layout_width="201dp"
+                android:layout_height="373dp"
                 android:layout_marginBottom="10dp"
-                android:text="TextView" />
+                app:srcCompat="@drawable/book"
+                tools:srcCompat="@drawable/book" />
+
+            <ImageView
+                android:id="@+id/dect2"
+                android:layout_width="352dp"
+                android:layout_height="373dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/camera_icon"
+                tools:srcCompat="@drawable/camera_icon" />
+
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/txt2"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginBottom="10dp"
-            android:text="TextView" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/txt3"
-            android:layout_width="match_parent"
-            android:layout_height="46dp"
-            android:layout_marginBottom="10dp"
-            android:text="TextView" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="73dp" />
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="TextView"
+                android:textColor="#040404"
+                android:textSize="20sp" />
+        </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/home"
             android:layout_width="265dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
+            android:layout_marginTop="100dp"
             android:background="@drawable/btn_custom"
             android:text="홈으로"
             android:textColor="#FAF6F6"

@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/login_main_Linear"
         android:layout_width="411dp"
-        android:layout_height="729dp"
+        android:layout_height="869dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
@@ -52,7 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:gravity="center"
-                android:text="회원 로그인"
+                android:text="회원정보"
                 android:textColor="#201F1F"
                 android:textSize="30sp" />
 
@@ -60,81 +60,91 @@
                 android:layout_width="match_parent"
                 android:layout_height="23dp" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="270dp"
-                app:srcCompat="@drawable/book" />
-
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="31dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="431dp"
                 android:orientation="horizontal">
 
-                <Space
-                    android:layout_width="64dp"
-                    android:layout_height="match_parent" />
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="215dp"
+                    android:layout_height="277dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="10dp"
+                    app:srcCompat="@drawable/profile" />
 
-                <EditText
-                    android:id="@+id/txt_id"
-                    android:layout_width="254dp"
-                    android:layout_height="51dp"
-                    android:layout_marginLeft="10sp"
-                    android:background="@drawable/txt_line_cutstom"
-                    android:ems="10"
-                    android:hint="아이디"
-                    android:inputType="textPersonName"
-                    android:textSize="20sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:orientation="vertical">
 
-                <Space
-                    android:layout_width="80dp"
-                    android:layout_height="51dp" />
+                    <EditText
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="51dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/txt_line_cutstom"
+                        android:ems="10"
+                        android:hint="이름"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:textSize="20sp" />
 
-            </LinearLayout>
+                    <EditText
+                        android:id="@+id/year"
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/txt_line_cutstom"
+                        android:ems="10"
+                        android:hint="생년월일"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:textSize="20sp" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="16dp"
-                android:layout_weight="1" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-
-                <Space
-                    android:layout_width="75dp"
-                    android:layout_height="match_parent" />
+                    <EditText
+                        android:id="@+id/age"
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/txt_line_cutstom"
+                        android:ems="10"
+                        android:hint="성별"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:textSize="20sp" />
+                </LinearLayout>
 
                 <EditText
                     android:id="@+id/txt_pwd"
-                    android:layout_width="254dp"
-                    android:layout_height="51dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/txt_line_cutstom"
                     android:ems="10"
                     android:hint="비밀번호"
                     android:inputType="textPassword"
                     android:textSize="20sp" />
 
-                <Space
-                    android:layout_width="15dp"
-                    android:layout_height="match_parent" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
 
         </LinearLayout>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="39dp" />
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Space
@@ -146,7 +156,7 @@
                 android:layout_width="265dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/btn_custom"
-                android:text="로그인"
+                android:text="책 반납 "
                 android:textColor="#FAF6F6"
                 android:textSize="20sp" />
 

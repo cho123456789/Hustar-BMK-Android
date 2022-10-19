@@ -363,7 +363,7 @@
                     android:layout_weight="1" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/signup"
+                    android:id="@+id/start"
                     android:layout_width="69dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/btn_custom"

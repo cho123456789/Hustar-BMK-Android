@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/main_Linear"
         android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_height="869dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
@@ -42,71 +42,23 @@
         <ImageView
             android:id="@+id/logo"
             android:layout_width="match_parent"
-            android:layout_height="340dp"
+            android:layout_height="434dp"
             app:srcCompat="@drawable/book" />
 
-        <LinearLayout
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="178dp"
-            android:orientation="vertical">
+            android:layout_height="47dp" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="50dp" />
-
-            <LinearLayout
-                android:id="@+id/login_Linear"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Space
-                    android:layout_width="70dp"
-                    android:layout_height="match_parent" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/login"
-                    android:layout_width="265dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/btn_custom"
-                    android:text="로그인"
-                    android:textColor="#FAF6F6"
-                    android:textSize="20sp" />
-
-                <Space
-                    android:layout_width="58dp"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="24dp" />
-
-            <LinearLayout
-                android:id="@+id/sign_up_Linear"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Space
-                    android:layout_width="70dp"
-                    android:layout_height="match_parent" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/signup"
-                    android:layout_width="265dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/btn_custom"
-                    android:text="회원가입"
-                    android:textColor="#FBFBFB"
-                    android:textSize="20sp" />
-
-                <Space
-                    android:layout_width="58dp"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
-
-        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/start"
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/btn_custom"
+            android:text="Start"
+            android:textColor="#FBFBFB"
+            android:textSize="20sp" />
 
     </LinearLayout>
 </LinearLayout>

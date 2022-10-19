@@ -13,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnlongin  = findViewById(R.id.login);  // 버튼 레이아웃 매칭
-        btnsingup  = findViewById(R.id.signup); // 버튼 레이아웃 매칭
+        btnlongin  = findViewById(R.id.start);  // 버튼 레이아웃 매칭
+        //btnsingup  = findViewById(R.id.start); // 버튼 레이아웃 매칭
 
         btnlongin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -22,14 +22,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent myIntent = new Intent(MainActivity.this,login.class);   // MAIN -> login class로 이동하는 이벤트
                 startActivity(myIntent); // 이벤트 시작하는 코드
                 finish(); // 이벤트 종료
-            }
-        });
-        btnsingup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent myIntent = new Intent(MainActivity.this,sign_up.class);   // MAIN -> sign class로 이동하는 이벤트
-                startActivity(myIntent); // 이벤트 시작하는 코드
-                finish(); // 이벤트 종료123
             }
         });
     }

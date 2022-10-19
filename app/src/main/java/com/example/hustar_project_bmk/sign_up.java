@@ -19,7 +19,7 @@ public class sign_up extends AppCompatActivity {
             public void onClick(View view) {
                 Intent myIntent = new Intent(sign_up.this,MainActivity.class);   // sign -> main class로 이동하는 이벤트
                 startActivity(myIntent); // 이벤트 시작하는 코드
-                finish(); // 이벤트 종료12341567
+                finish(); // 이벤트 종료
             }
         });
     }
