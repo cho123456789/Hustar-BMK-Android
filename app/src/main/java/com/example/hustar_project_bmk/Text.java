@@ -67,7 +67,7 @@ public class Text extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(Text.this,MainActivity.class);   // Text -> main class로 이동하는 이벤트
+                Intent myIntent = new Intent(Text.this,camera.class);   // Text -> camera class로 이동하는 이벤트
                 startActivity(myIntent); // 이벤트 시작하는 코드
                 finish(); // 이벤트 종료
             }
