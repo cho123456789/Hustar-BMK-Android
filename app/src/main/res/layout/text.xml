@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".camera_data">
+    tools:context=".Text"
+    tools:ignore="MissingDefaultResource">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,6 +73,18 @@
                 android:text="TextView"
                 android:textColor="#040404"
                 android:textSize="20sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/getImage"
+                android:layout_width="234dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="70dp"
+                android:background="@drawable/btn_custom"
+                android:text="결과확인"
+                android:textColor="#FAF6F6"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -79,11 +92,14 @@
             android:layout_width="265dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:background="@drawable/btn_custom"
+            android:minHeight="48dp"
             android:text="홈으로"
             android:textColor="#FAF6F6"
             android:textSize="20sp" />
 
     </LinearLayout>
 </LinearLayout>
+
+

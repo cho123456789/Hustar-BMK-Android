@@ -58,12 +58,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:gravity="center_horizontal|center_vertical"
-                android:visibility="invisible"
-                android:text="파일 업로드 중입니다.." />
+                android:text="파일 업로드 중입니다.."
+                android:visibility="invisible" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
                 android:orientation="horizontal">
 
                 <Space
@@ -75,7 +76,8 @@
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="330dp"
                     android:layout_height="match_parent"
-                    android:progressDrawable="@drawable/pro_custom" />
+                    android:progressDrawable="@drawable/pro_custom"
+                    android:visibility="invisible" />
 
             </LinearLayout>
 
@@ -90,20 +92,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="82dp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <Space
-                        android:layout_width="106dp"
-                        android:layout_height="match_parent" />
-
-                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -121,7 +109,8 @@
                         android:background="@drawable/btn_custom"
                         android:text="업로드"
                         android:textColor="#FAF6F6"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:visibility="invisible" />
 
                 </LinearLayout>
 
@@ -143,7 +132,8 @@
                     android:background="@drawable/btn_custom"
                     android:text="결과"
                     android:textColor="#FAF6F6"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:visibility="invisible" />
 
             </LinearLayout>
 
