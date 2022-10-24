@@ -62,6 +62,7 @@ public class login extends AppCompatActivity {
 
                     //-------------------------------------------------///
                     name.setText(value.getData().get("name").toString());
+                    //String a = value.getData().get("name").toString();
                     age.setText(value.getData().get("age").toString());
                     year.setText(value.getData().get("year").toString());
                     //----------------------------------------------------//

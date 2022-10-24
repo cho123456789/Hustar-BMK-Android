@@ -112,7 +112,7 @@ public class Text extends AppCompatActivity {
                     }
                 });
                 // 원하는 collection 에서 값이 변경될경우 이벤트 발생
-                storageReference = FirebaseStorage.getInstance().getReference("my_folder/" + "2022-10-19_11_03_58" + ".png");
+                storageReference = FirebaseStorage.getInstance().getReference("my_folder/" + "1" + ".png");
                 // 다운로드할 파일명 설정
                 try {
                     File localfile = File.createTempFile("tempfile", ".jpg");
@@ -146,7 +146,7 @@ public class Text extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                storageReference = FirebaseStorage.getInstance().getReference("my_folder/" + "2022-10-19_12_00_15" + ".png");
+                storageReference = FirebaseStorage.getInstance().getReference("my_folder/" + "2" + ".png");
                 try {
                     File localfile = File.createTempFile("tempfile", ".jpg");
                     storageReference.getFile(localfile)
