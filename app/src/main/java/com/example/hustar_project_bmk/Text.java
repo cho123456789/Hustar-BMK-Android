@@ -101,7 +101,7 @@ public class Text extends AppCompatActivity {
                         }
                         if (value != null && value.exists())
                         {
-                            float nNumber = Float.parseFloat(String.valueOf(value.getLong("txt")));
+                            float nNumber = Float.parseFloat(String.valueOf(value.getLong("txt2")));
                             System.out.println("Current datavalue: " + nNumber);
                             String pm25 = String.format("%.0f", nNumber);
                             result_view(pm25);
