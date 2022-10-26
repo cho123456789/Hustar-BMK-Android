@@ -26,6 +26,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
@@ -134,16 +135,16 @@ public class camera extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-            int exifOrientation;
+            int exifOrientation ;
             int exifDegree;
 
             if (exif != null) {
                 exifOrientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
                 exifDegree = exifOrientationToDegrees(exifOrientation);
+
             } else {
                 exifDegree = 0;
             }
-
             ((ImageView)findViewById(R.id.Click_img1)).setImageBitmap(rotate(resize, exifDegree));
         }
     }
@@ -158,9 +159,28 @@ public class camera extends AppCompatActivity {
         return 0;
     }
     private Bitmap rotate(Bitmap bitmap, float degree) {
-        Matrix matrix = new Matrix();
-        matrix.postRotate(degree);
-        return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+        if(degree != 0 && bitmap != null)
+        {
+            Matrix m = new Matrix();
+            m.setRotate(degree, (float) bitmap.getWidth() / 2,
+                    (float) bitmap.getHeight() / 2);
+
+            try
+            {
+                Bitmap converted = Bitmap.createBitmap(bitmap, 0, 0,
+                        bitmap.getWidth(), bitmap.getHeight(), m, true);
+                if(bitmap != converted)
+                {
+                    bitmap.recycle();
+                    bitmap = converted;
+                }
+            }
+            catch(OutOfMemoryError ex)
+            {
+                // 메모리가 부족하여 회전을 시키지 못할 경우 그냥 원본을 반환합니다.
+            }
+        }
+        return bitmap;
     }
     private void sendTakePhotoIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);

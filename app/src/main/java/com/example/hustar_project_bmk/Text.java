@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -39,7 +40,7 @@ public class Text extends AppCompatActivity {
     TextBinding binding;
     StorageReference storageReference;
     ProgressDialog progressDialog; // 진행 상태바
-    ImageView img1,img2;
+    ImageView img1, img2;
     TextView txt;
     Button home;
     // -------버튼 타입 설정-----------//
@@ -57,7 +58,7 @@ public class Text extends AppCompatActivity {
         // --------버튼 레이아웃 연결------------//
         img1 = findViewById(R.id.dect1);
         img2 = findViewById(R.id.dect2);
-        txt = findViewById(R.id.txt_name);
+        //txt = findViewById(R.id.txt_name);
         home = findViewById(R.id.home);
         // --------버튼 레이아웃 연결------------//
 
@@ -66,7 +67,7 @@ public class Text extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(Text.this,camera.class);   // Text -> camera class로 이동하는 이벤트
+                Intent myIntent = new Intent(Text.this, barcode.class);   // Text -> camera class로 이동하는 이벤트
                 startActivity(myIntent); // 이벤트 시작하는 코드
                 finish(); // 이벤트 종료
             }
@@ -86,32 +87,6 @@ public class Text extends AppCompatActivity {
                 //String imageID = binding.etimageId.getText().toString();
 
 
-                final FirebaseFirestore db  = FirebaseFirestore.getInstance();
-                // DB 참조 설정
-                DocumentReference docRef  =db.collection("user").document("test");
-                // 원하는 collection , document 설정
-                docRef.addSnapshotListener(new EventListener<DocumentSnapshot>() {
-                    @Override
-                    public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                        if(error != null)
-                        {
-                            System.err.println("Listen failed: " + error);
-                            return;
-                        }
-                        if (value != null && value.exists())
-                        {
-
-                            txt.setText(value.getData().get("txt2").toString());
-                            //float nNumber = Float.parseFloat(String.valueOf(value.getLong("txt2")));
-                            //System.out.println("Current datavalue: " + nNumber);
-                            //String pm25 = String.format("%.0f", nNumber);
-                            //result_view(pm25);
-                        }
-                        else{
-                            System.out.println("Current data: null");
-                        }
-                    }
-                });
                 // 원하는 collection 에서 값이 변경될경우 이벤트 발생
                 storageReference = FirebaseStorage.getInstance().getReference("my_folder/" + "1" + ".png");
                 // 다운로드할 파일명 설정
@@ -123,13 +98,19 @@ public class Text extends AppCompatActivity {
                                 @Override
                                 public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
 
-                                    if(progressDialog.isShowing())
+                                    if (progressDialog.isShowing())
                                         progressDialog.dismiss();
-                                        // 대화상자 종료
+                                    // 대화상자 종료
 
                                     Bitmap bitmap = BitmapFactory.decodeFile(localfile.getAbsolutePath());
                                     //  가주온 파일을 비트맵으로 디코딩실시
-                                    binding.dect1.setImageBitmap(bitmap);
+                                    int mDegree = 0;
+                                    mDegree = mDegree + 90;
+                                    img2 = findViewById(R.id.dect2);
+                                    binding.dect1.setImageBitmap(rotateImage(bitmap ,mDegree));
+
+
+                                    //binding.dect1.setImageBitmap(bitmap);
                                     // 이미지뷰에 이미지 표시하기
 
                                 }
@@ -137,10 +118,10 @@ public class Text extends AppCompatActivity {
                         @Override
                         public void onFailure(@NonNull Exception e) {
 
-                            if(progressDialog.isShowing())
+                            if (progressDialog.isShowing())
                                 progressDialog.dismiss();
 
-                            Toast.makeText(Text.this,"Failed to retrieve",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Text.this, "Failed to retrieve", Toast.LENGTH_SHORT).show();
 
                         }
                     });
@@ -155,21 +136,60 @@ public class Text extends AppCompatActivity {
                                 @Override
                                 public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
 
-                                    if(progressDialog.isShowing())
+                                    if (progressDialog.isShowing())
                                         progressDialog.dismiss();
 
-                                    Bitmap bitmap = BitmapFactory.decodeFile(localfile.getAbsolutePath());
-                                    binding.dect2.setImageBitmap(bitmap);
+                                    //Bitmap bitmap = BitmapFactory.decodeFile(localfile.getAbsolutePath());
+
+                                    Bitmap bitmap1 = BitmapFactory.decodeFile(localfile.getAbsolutePath());
+                                    //  가주온 파일을 비트맵으로 디코딩실시
+                                    int mDegree1 = 0;
+                                    mDegree1 = mDegree1 + 90;
+                                    img2 = findViewById(R.id.dect2);
+                                    binding.dect2.setImageBitmap(rotateImage(bitmap1 ,mDegree1));
+
+                                    final FirebaseFirestore db = FirebaseFirestore.getInstance();
+                                    // DB 참조 설정
+                                    DocumentReference docRef = db.collection("user").document("test");
+                                    // 원하는 collection , document 설정
+                                    docRef.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                                        @Override
+                                        public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                                            if (error != null) {
+                                                System.err.println("Listen failed: " + error);
+                                                return;
+                                            }
+                                            if (value != null && value.exists()) {
+                                                try {
+                                                    Thread.sleep(2000);
+                                                    Toast.makeText(Text.this, value.getData().get("txt2").toString(), Toast.LENGTH_SHORT).show();
+                                                    //txt.setText(value.getData().get("txt2").toString());
+                                                    //float nNumber = Float.parseFloat(String.valueOf(value.getLong("txt2")));
+                                                    //System.out.println("Current datavalue: " + nNumber);
+                                                    //String pm25 = String.format("%.0f", nNumber);
+                                                    //result_view(pm25);
+                                                }catch (InterruptedException e)
+                                                {
+                                                    e.printStackTrace();
+                                                }
+                                            } else {
+                                                System.out.println("Current data: null");
+                                            }
+                                        }
+                                    });
+
+
+                                    //binding.dect2.setImageBitmap(bitmap);
 
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
 
-                            if(progressDialog.isShowing())
+                            if (progressDialog.isShowing())
                                 progressDialog.dismiss();
 
-                            Toast.makeText(Text.this,"Failed to retrieve",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Text.this, "Failed to retrieve", Toast.LENGTH_SHORT).show();
 
                         }
                     });
@@ -181,19 +201,14 @@ public class Text extends AppCompatActivity {
 
     }
 
+    public Bitmap rotateImage(Bitmap src, float degree) {
 
-
-    void result_view(String pm25)
-    {
-        int pm255 = Integer.parseInt(pm25);
-
-        if(pm255 < 80)
-        {
-            txt.setText("파손이 발생하였습니다"+"\n"+"안내 데스크로 가십시오");
-        }
-        else
-        {
-            txt.setText("이상이 없습니다"+"\n"+"반납을 실시하십시오");
-        }
+        // Matrix 객체 생성
+        Matrix matrix = new Matrix();
+        // 회전 각도 셋팅
+        matrix.postRotate(degree);
+        // 이미지와 Matrix 를 셋팅해서 Bitmap 객체 생성
+        return Bitmap.createBitmap(src, 0, 0, src.getWidth(),
+                src.getHeight(), matrix, true);
     }
 }
