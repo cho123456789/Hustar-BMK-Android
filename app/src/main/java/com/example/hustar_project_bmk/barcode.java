@@ -94,7 +94,7 @@ public class barcode extends AppCompatActivity {
                 // 사진 찍는 함수 설정
                 //startActivityForResult(galleryIntent, TAKE_PICTURE);
                 // 카메라 찍기
-               // dialog.setVisibility(View.VISIBLE);
+                // dialog.setVisibility(View.VISIBLE);
                 btnnext.setVisibility(View.VISIBLE);
                 btnupload.setVisibility(View.VISIBLE);
                 bookname.setVisibility(View.VISIBLE);
@@ -112,7 +112,6 @@ public class barcode extends AppCompatActivity {
                     @Override
                     public void onEvent(@javax.annotation.Nullable DocumentSnapshot value, @javax.annotation.Nullable FirebaseFirestoreException error) {
                         // 이벤트 발생하는 자식 메소드
-
                         if(error != null)
                         {
                             System.err.println("Listen failed: " + error);
@@ -124,11 +123,13 @@ public class barcode extends AppCompatActivity {
                         if (value != null && value.exists())
                         {
                             // 에러가 없을시 사용자가 원하는 필드값을 가주고온다
-
+                            float nNumber = Float.parseFloat(String.valueOf(value.getLong("bookno")));
+                            String pm25 = String.format("%.0f", nNumber);
+                            Startbook(pm25);
                             //-------------------------------------------------///
-                            bookname.setText(value.getData().get("bookname").toString());
+                            //bookname.setText(value.getData().get("bookname").toString());
                             //String a = value.getData().get("name").toString();
-                            bookwriter.setText(value.getData().get("bookwriter").toString());
+                            //bookwriter.setText(value.getData().get("bookwriter").toString());
                             //year.setText(value.getData().get("year").toString());
                             //----------------------------------------------------//
                             //  원하는 필드의 값을 getData로 가주고 오기
@@ -143,11 +144,6 @@ public class barcode extends AppCompatActivity {
                         }
                     }
                 });
-
-
-
-
-
 
             }
         });
@@ -306,6 +302,84 @@ public class barcode extends AppCompatActivity {
         }
 
     }
+    private void Startbook(String pm25)
+    {
+        int pm255 = Integer.parseInt(pm25);
+
+        if(pm255 == 1)
+        {
+            final FirebaseFirestore db  = FirebaseFirestore.getInstance();
+            DocumentReference docRef  =db.collection("user").document("book1");
+            docRef.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                @Override
+                public void onEvent(@javax.annotation.Nullable DocumentSnapshot value, @javax.annotation.Nullable FirebaseFirestoreException error) {
+                    if(error != null) {
+                        System.err.println("Listen failed: " + error);
+                        return;
+                    }
+                    if (value != null && value.exists())
+                    {
+                        bookname.setText(value.getData().get("bookname").toString());
+                        bookwriter.setText(value.getData().get("bookwriter").toString());
+                    }
+                    // 데이터가 null 일때 null 데이터 표시 실시
+                    else{
+                        System.out.println("Current data: null");
+                    }
+                }
+            });
+
+        }
+        if(pm255 == 2)
+        {
+            final FirebaseFirestore db  = FirebaseFirestore.getInstance();
+            DocumentReference docRef  =db.collection("user").document("book2");
+            docRef.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                @Override
+                public void onEvent(@javax.annotation.Nullable DocumentSnapshot value, @javax.annotation.Nullable FirebaseFirestoreException error) {
+                    if(error != null) {
+                        System.err.println("Listen failed: " + error);
+                        return;
+                    }
+                    if (value != null && value.exists())
+                    {
+                        bookname.setText(value.getData().get("bookname").toString());
+                        bookwriter.setText(value.getData().get("bookwriter").toString());
+                    }
+                    // 데이터가 null 일때 null 데이터 표시 실시
+                    else{
+                        System.out.println("Current data: null");
+                    }
+                }
+            });
+
+        }
+        if(pm255 == 3)
+        {
+            final FirebaseFirestore db  = FirebaseFirestore.getInstance();
+            DocumentReference docRef  =db.collection("user").document("book3");
+            docRef.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                @Override
+                public void onEvent(@javax.annotation.Nullable DocumentSnapshot value, @javax.annotation.Nullable FirebaseFirestoreException error) {
+                    if(error != null) {
+                        System.err.println("Listen failed: " + error);
+                        return;
+                    }
+                    if (value != null && value.exists())
+                    {
+                        bookname.setText(value.getData().get("bookname").toString());
+                        bookwriter.setText(value.getData().get("bookwriter").toString());
+                    }
+                    // 데이터가 null 일때 null 데이터 표시 실시
+                    else{
+                        System.out.println("Current data: null");
+                    }
+                }
+            });
+
+        }
+    }
+
     //----------카메라 권한 요청  ---------------------------------//
 }
 

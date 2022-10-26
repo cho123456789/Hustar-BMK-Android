@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <Space
@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="33dp"
             android:gravity="center_horizontal|center_vertical"
-            android:text="책 판정 결과"
+            android:text="책 판정 결과 (자세히 볼려면 사진을 드래그 하세요) "
             android:textSize="17sp" />
 
         <Space
@@ -59,13 +59,29 @@
                     android:textColor="#070707"
                     android:textSize="20sp" />
 
-                <ImageView
-                    android:id="@+id/dect1"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="227dp"
-                    android:layout_marginBottom="10dp"
-                    app:srcCompat="@drawable/book"
-                    tools:srcCompat="@drawable/book" />
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="236dp" />
+
+                    <com.github.chrisbanes.photoview.PhotoView
+                        android:id="@+id/dect1"
+                        android:layout_width="382dp"
+                        android:layout_height="240dp"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/book"
+                        tools:srcCompat="@drawable/book" />
+
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="236dp" />
+                </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
@@ -82,13 +98,28 @@
                     android:textColor="#070707"
                     android:textSize="20sp" />
 
-                <ImageView
-                    android:id="@+id/dect2"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="225dp"
-                    android:layout_marginBottom="10dp"
-                    app:srcCompat="@drawable/camera_icon"
-                    tools:srcCompat="@drawable/camera_icon" />
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="237dp" />
+
+                    <com.github.chrisbanes.photoview.PhotoView
+                        android:id="@+id/dect2"
+                        android:layout_width="382dp"
+                        android:layout_height="240dp"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/camera_icon"
+                        tools:srcCompat="@drawable/camera_icon" />
+
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="237dp" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -96,7 +127,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="73dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
@@ -109,7 +140,7 @@
                 android:layout_width="234dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="90dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="70dp"
                 android:background="@drawable/btn_custom"
                 android:text="결과확인"

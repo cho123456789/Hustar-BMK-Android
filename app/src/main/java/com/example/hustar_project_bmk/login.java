@@ -70,6 +70,7 @@ public class login extends AppCompatActivity {
                     // toString으로 문자열 변환실시
                     // 그값을 TextView로 표시하기
 
+
                 }
 
                 // 데이터가 null 일때 null 데이터 표시 실시

@@ -264,7 +264,13 @@ public class camera extends AppCompatActivity {
                 int bytesTransferred = (int) snapshot.getBytesTransferred();
                 int totalBytes = (int) snapshot.getTotalByteCount();
                 int progress = (100 * bytesTransferred) / totalBytes;
+                //System.out.println("t12321"+progress);
                 dialog.setProgress(progress);
+                if (progress == 100)
+                {
+                    upload_txt.setText("결과화면으로 넘어가세요");
+                }
+
                 // ------- 저장 중 로딩 시간을 구하는 식 --------------//
             }
         });
