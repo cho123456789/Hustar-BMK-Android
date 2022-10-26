@@ -90,7 +90,7 @@ public class login extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(login.this,camera.class);   // login-> camera class로 이동하는 이벤트
+                Intent myIntent = new Intent(login.this,barcode.class);   // login-> camera class로 이동하는 이벤트
                 startActivity(myIntent); // 이벤트 시작하는 코드
                 finish(); // 이벤트 종료
             }

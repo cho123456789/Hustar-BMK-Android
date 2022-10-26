@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".camera">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="628dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_back_sign"
+                android:layout_width="57dp"
+                android:layout_height="55dp"
+                android:background="#00ff0000"
+                android:text="back"
+                android:textColor="#757575" />
+
+            <TextView
+                android:id="@+id/login_txt2"
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:layout_gravity="clip_horizontal|center|center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="BookMarK"
+                android:textColor="#040303"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:gravity="clip_horizontal|center_horizontal|center_vertical"
+                android:hint="바코드 촬영을 위해서 카메라 아이콘을 클릭해주세요"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/Click_img1"
+                android:layout_width="match_parent"
+                android:layout_height="297dp"
+                app:srcCompat="@drawable/camera_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="68dp"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/bookname"
+                        android:layout_width="287dp"
+                        android:layout_height="49dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hint="책이름"
+                        android:textColor="#040404"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:visibility="invisible"
+                            android:id="@+id/bookwirter"
+                            android:layout_width="285dp"
+                            android:layout_height="47dp"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hint="저자"
+                            android:textColor="#000000"
+                            android:textSize="24sp" />
+
+                        <Space
+                            android:layout_width="52dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Space
+                            android:layout_width="104dp"
+                            android:layout_height="match_parent" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/loadbtn"
+                            android:layout_width="200dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/btn_custom"
+                            android:text="업로드"
+                            android:textColor="#FAF6F6"
+                            android:textSize="20sp"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="104dp"
+                        android:layout_height="match_parent" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/nextbtn"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/btn_custom"
+                        android:text="다음 단계"
+                        android:textColor="#FAF6F6"
+                        android:textSize="20sp"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -43,11 +43,11 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class camera extends AppCompatActivity {
+public class barcode extends AppCompatActivity {
     // --------------------------------//
-    Button back_btn,btnupload,btnresult;
+    Button back_btn,btnupload,btnnext;
     ImageView img1;
-    TextView upload_txt, txt_name, txt_writer;
+    TextView upload_txt,bookname,bookwriter;
     private Uri imageUri;
     ProgressBar dialog;
     // -------버튼 타입 설정-----------//
@@ -63,24 +63,26 @@ public class camera extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_camera);
+        setContentView(R.layout.barcode);
 
         //-----------버튼 레이아웃 설정정-----------------/
         back_btn = (Button) findViewById(R.id.btn_back_sign);
         img1 = (ImageView) findViewById(R.id.Click_img1);
-        btnupload = findViewById(R.id.nextbtn);
-        btnresult  = findViewById(R.id.result);
-        dialog = findViewById(R.id.progressBar);
-        upload_txt = findViewById(R.id.textupload);
-        txt_name = findViewById(R.id.bookname);
-        txt_writer = findViewById(R.id.bookwirter);
+        btnupload = findViewById(R.id.loadbtn);
+        btnnext  = findViewById(R.id.nextbtn);
+        bookname = findViewById(R.id.bookname);
+        bookwriter = findViewById(R.id.bookwirter);
+
         //-----------버튼 이벤트 설정-------------------//
 
         btnupload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                uploadToFirebase();   // 업로드 함수로 이동
-                upload_txt.setVisibility(View.VISIBLE);
+                uploadToFirebase1();   // 업로드 함수로 이동
+                //upload_txt.setVisibility(View.VISIBLE);
+                bookname.setVisibility(View.VISIBLE);
+                bookwriter.setVisibility(View.VISIBLE);
+
             }
         });
 
@@ -92,9 +94,60 @@ public class camera extends AppCompatActivity {
                 // 사진 찍는 함수 설정
                 //startActivityForResult(galleryIntent, TAKE_PICTURE);
                 // 카메라 찍기
-                dialog.setVisibility(View.VISIBLE);
-                btnresult.setVisibility(View.VISIBLE);
+               // dialog.setVisibility(View.VISIBLE);
+                btnnext.setVisibility(View.VISIBLE);
                 btnupload.setVisibility(View.VISIBLE);
+                bookname.setVisibility(View.VISIBLE);
+                bookwriter.setVisibility(View.VISIBLE);
+
+                final FirebaseFirestore db  = FirebaseFirestore.getInstance();
+                // Firestore DB 접속을 위해서 참조 생성
+
+                DocumentReference docRef  =db.collection("user").document("test");
+                // 생성된 참조를 이용하여 원하는 위치에 있는 collection 및 document 값 입력
+
+                docRef.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                    // addSnapshotListner -> 해당하는 위치에 데이터의 변경이 실시될때 이벤트 발생
+
+                    @Override
+                    public void onEvent(@javax.annotation.Nullable DocumentSnapshot value, @javax.annotation.Nullable FirebaseFirestoreException error) {
+                        // 이벤트 발생하는 자식 메소드
+
+                        if(error != null)
+                        {
+                            System.err.println("Listen failed: " + error);
+                            return;
+                        }
+                        // 에러가 발생할시  -> 에러 메세지 호출 및 반환 실시
+
+
+                        if (value != null && value.exists())
+                        {
+                            // 에러가 없을시 사용자가 원하는 필드값을 가주고온다
+
+                            //-------------------------------------------------///
+                            bookname.setText(value.getData().get("bookname").toString());
+                            //String a = value.getData().get("name").toString();
+                            bookwriter.setText(value.getData().get("bookwriter").toString());
+                            //year.setText(value.getData().get("year").toString());
+                            //----------------------------------------------------//
+                            //  원하는 필드의 값을 getData로 가주고 오기
+                            // toString으로 문자열 변환실시
+                            // 그값을 TextView로 표시하기
+
+                        }
+
+                        // 데이터가 null 일때 null 데이터 표시 실시
+                        else{
+                            System.out.println("Current data: null");
+                        }
+                    }
+                });
+
+
+
+
+
 
             }
         });
@@ -103,15 +156,15 @@ public class camera extends AppCompatActivity {
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(camera.this,login.class);   // camera-> login class로 이동하는 이벤트
+                Intent myIntent = new Intent(barcode.this,login.class);   // barcode -> camera class로 이동하는 이벤트
                 startActivity(myIntent); // 이벤트 시작하는 코드
                 finish(); // 이벤트 종료
             }
         });
-        btnresult.setOnClickListener(new View.OnClickListener() {
+        btnnext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(camera.this, Text.class);   // camera-> camera_data class로 이동하는 이벤트
+                Intent myIntent = new Intent(barcode.this,camera.class);   // barcode -> camera class로 이동하는 이벤트
                 startActivity(myIntent); // 이벤트 시작하는 코드
                 finish(); // 이벤트 종료
             }
@@ -206,17 +259,17 @@ public class camera extends AppCompatActivity {
 
 
     // ---- 파이어베이스 사진 업로드  -------------------------------//
-    private  void uploadToFirebase() {
+    private  void uploadToFirebase1() {
         FirebaseStorage storage = FirebaseStorage.getInstance();
         // 파이어베이스 참조 설정
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd_HH_mm_ss");
+        //SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd_HH_mm_ss");
         // 현재 년월일 시간 지정
         Date now = new Date();
         // 현재 날짜 클래스 설정
         //String filename = formatter.format(now) + ".png";
         // 현재 날짜를 변환하여 문자열로 전환
 
-        String filename2 = "2" + ".png";
+        String filename2 = "barcode" + ".png";
 
         StorageReference storageRef = storage.getReferenceFromUrl("gs://hustar-9eeb8.appspot.com").child("my_folder/" + filename2);
         // 현재 파이어베이스에서 접속하고자하는 url 및 폴더 및 저장할 이름설정
@@ -240,12 +293,6 @@ public class camera extends AppCompatActivity {
             @Override
             public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
 
-                // ------- 저장 중 로딩 시간을 구하는 식 --------------//
-                int bytesTransferred = (int) snapshot.getBytesTransferred();
-                int totalBytes = (int) snapshot.getTotalByteCount();
-                int progress = (100 * bytesTransferred) / totalBytes;
-                dialog.setProgress(progress);
-                // ------- 저장 중 로딩 시간을 구하는 식 --------------//
             }
         });
 
@@ -259,7 +306,7 @@ public class camera extends AppCompatActivity {
         }
 
     }
-        //----------카메라 권한 요청  ---------------------------------//
+    //----------카메라 권한 요청  ---------------------------------//
 }
 
 

@@ -44,7 +44,7 @@
                 android:textSize="17sp" />
 
             <ImageView
-                android:id="@+id/Click_img"
+                android:id="@+id/Click_img1"
                 android:layout_width="match_parent"
                 android:layout_height="294dp"
                 app:srcCompat="@drawable/camera_icon" />
@@ -102,7 +102,7 @@
                         android:layout_height="match_parent" />
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/upload"
+                        android:id="@+id/nextbtn"
                         android:layout_width="200dp"
                         android:layout_height="50dp"
                         android:layout_marginTop="30dp"

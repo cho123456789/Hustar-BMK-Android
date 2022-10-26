@@ -54,7 +54,6 @@ public class Text extends AppCompatActivity {
         setContentView(binding.getRoot());
         // 바인딩의 부모를 레이아웃을 보여준다
 
-
         // --------버튼 레이아웃 연결------------//
         img1 = findViewById(R.id.dect1);
         img2 = findViewById(R.id.dect2);
@@ -101,10 +100,12 @@ public class Text extends AppCompatActivity {
                         }
                         if (value != null && value.exists())
                         {
-                            float nNumber = Float.parseFloat(String.valueOf(value.getLong("txt2")));
-                            System.out.println("Current datavalue: " + nNumber);
-                            String pm25 = String.format("%.0f", nNumber);
-                            result_view(pm25);
+
+                            txt.setText(value.getData().get("txt2").toString());
+                            //float nNumber = Float.parseFloat(String.valueOf(value.getLong("txt2")));
+                            //System.out.println("Current datavalue: " + nNumber);
+                            //String pm25 = String.format("%.0f", nNumber);
+                            //result_view(pm25);
                         }
                         else{
                             System.out.println("Current data: null");
