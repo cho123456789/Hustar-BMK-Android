@@ -21,6 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hustar_Project_BMK">
         <activity
+            android:name=".bookImage"
+            android:exported="true" />
+        <activity
             android:name=".barcode"
             android:exported="true" />
         <activity

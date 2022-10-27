@@ -55,48 +55,14 @@
                 android:layout_marginTop="50dp"
                 android:orientation="horizontal">
 
-                <Space
-                    android:layout_width="68dp"
-                    android:layout_height="match_parent" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <ProgressBar
+                    android:id="@+id/progressBar2"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="330dp"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:visibility="invisible"
-                        android:id="@+id/bookname"
-                        android:layout_width="287dp"
-                        android:layout_height="49dp"
-                        android:gravity="center_horizontal|center_vertical"
-                        android:hint="책이름"
-                        android:textColor="#040404"
-                        android:textSize="24sp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:visibility="invisible"
-                            android:id="@+id/bookwirter"
-                            android:layout_width="285dp"
-                            android:layout_height="47dp"
-                            android:gravity="center_horizontal|center_vertical"
-                            android:hint="저자"
-                            android:textColor="#000000"
-                            android:textSize="24sp" />
-
-                        <Space
-                            android:layout_width="52dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
+                    android:layout_weight="1"
+                    android:progressDrawable="@drawable/pro_custom"
+                    android:visibility="invisible" />
             </LinearLayout>
 
         </LinearLayout>

@@ -26,14 +26,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -70,11 +64,10 @@ public class camera extends AppCompatActivity {
         back_btn = (Button) findViewById(R.id.btn_back_sign);
         img1 = (ImageView) findViewById(R.id.Click_img1);
         btnupload = findViewById(R.id.nextbtn);
-        btnresult  = findViewById(R.id.result);
+        btnresult  = findViewById(R.id.nextbtn_0);
         dialog = findViewById(R.id.progressBar);
         upload_txt = findViewById(R.id.textupload);
-        txt_name = findViewById(R.id.bookname);
-        txt_writer = findViewById(R.id.bookwirter);
+
         //-----------버튼 이벤트 설정-------------------//
 
         btnupload.setOnClickListener(new View.OnClickListener() {
