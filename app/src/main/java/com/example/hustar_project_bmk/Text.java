@@ -41,7 +41,7 @@ public class Text extends AppCompatActivity {
     StorageReference storageReference;
     ProgressDialog progressDialog; // 진행 상태바
     ImageView img1, img2;
-    TextView txt;
+    TextView txtresult;
     Button home;
     // -------버튼 타입 설정-----------//
 
@@ -54,14 +54,14 @@ public class Text extends AppCompatActivity {
         // infalate 다른 화면의 레이아웃을 불러오기 위해서 접근을 가능하게 함
         setContentView(binding.getRoot());
         // 바인딩의 부모를 레이아웃을 보여준다
-
+        txtresult = findViewById(R.id.txtresultname);
         // --------버튼 레이아웃 연결------------//
         img1 = findViewById(R.id.dect1);
         img2 = findViewById(R.id.dect2);
         //txt = findViewById(R.id.txt_name);
         home = findViewById(R.id.home);
         // --------버튼 레이아웃 연결------------//
-
+        txtresult.setText("책판정결과"+"\n"+ "자세한 내용은 드래그하세요");
 
         // ------ 다른 액티비티로 이동 ------------//
         home.setOnClickListener(new View.OnClickListener() {

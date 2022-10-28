@@ -42,7 +42,7 @@ public class camera extends AppCompatActivity {
     // --------------------------------//
     Button back_btn,btnupload,btnresult;
     ImageView img1;
-    TextView upload_txt, txt_name, txt_writer;
+    TextView upload_txt, txtname;
     private Uri imageUri;
     ProgressBar dialog;
     // -------버튼 타입 설정-----------//
@@ -67,7 +67,8 @@ public class camera extends AppCompatActivity {
         btnresult  = findViewById(R.id.nextbtn_0);
         dialog = findViewById(R.id.progressBar);
         upload_txt = findViewById(R.id.textupload);
-
+        txtname = findViewById(R.id.txtname);
+        txtname.setText("책 화면을 촬영을 위해서 "+"\n"+"카메라 아이콘을 클릭해주세요");
         //-----------버튼 이벤트 설정-------------------//
 
         btnupload.setOnClickListener(new View.OnClickListener() {

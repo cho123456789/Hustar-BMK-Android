@@ -33,8 +33,8 @@
                 android:layout_width="57dp"
                 android:layout_height="63dp"
                 android:background="#00ff0000"
-                android:text="back"
-                android:textColor="#757575" />
+                android:textColor="#757575"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/login_txt"
@@ -52,6 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:gravity="center"
+                android:fontFamily="@font/mari"
                 android:text="회원정보"
                 android:textColor="#201F1F"
                 android:textSize="30sp" />
@@ -91,6 +92,7 @@
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/txt_line_cutstom"
+                        android:fontFamily="@font/mari"
                         android:ems="10"
                         android:hint="이름"
                         android:inputType="textPersonName"
@@ -103,6 +105,7 @@
                         android:layout_height="51dp"
                         android:layout_marginRight="10dp"
                         android:background="@drawable/txt_line_cutstom"
+                        android:fontFamily="@font/mari"
                         android:ems="10"
                         android:hint="생년월일"
                         android:inputType="textPersonName"
@@ -116,6 +119,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="10dp"
                         android:background="@drawable/txt_line_cutstom"
+                        android:fontFamily="@font/mari"
                         android:ems="10"
                         android:hint="성별"
                         android:inputType="textPersonName"
@@ -123,15 +127,6 @@
                         android:textSize="20sp" />
                 </LinearLayout>
 
-                <EditText
-                    android:id="@+id/txt_pwd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/txt_line_cutstom"
-                    android:ems="10"
-                    android:hint="비밀번호"
-                    android:inputType="textPassword"
-                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -148,14 +143,15 @@
             android:orientation="horizontal">
 
             <Space
-                android:layout_width="66dp"
+                android:layout_width="97dp"
                 android:layout_height="48dp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/login"
-                android:layout_width="265dp"
+                android:layout_width="229dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/btn_custom"
+                android:fontFamily="@font/mari"
                 android:text="책 반납 "
                 android:textColor="#FAF6F6"
                 android:textSize="20sp" />

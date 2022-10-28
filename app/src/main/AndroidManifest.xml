@@ -21,6 +21,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hustar_Project_BMK">
         <activity
+            android:name=".loading"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".bookImage"
             android:exported="true" />
         <activity

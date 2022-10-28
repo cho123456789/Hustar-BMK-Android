@@ -36,11 +36,12 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/txtname"
                 android:layout_width="match_parent"
-                android:layout_height="49dp"
+                android:layout_height="60dp"
+                android:fontFamily="@font/mari"
                 android:gravity="clip_horizontal|center_horizontal|center_vertical"
-                android:hint="책 화면을 촬영을 위해서 카메라 아이콘을 클릭해주세요"
+                android:lineSpacingMultiplier="1.5"
                 android:textSize="17sp" />
 
             <ImageView

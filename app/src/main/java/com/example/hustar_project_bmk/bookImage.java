@@ -18,7 +18,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 public class bookImage extends AppCompatActivity {
     TextView bookname, bookwriter;
     Button btnnext, btnback;
-    ImageView img;
+    ImageView img1,img2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class bookImage extends AppCompatActivity {
         btnnext = findViewById(R.id.nextbtn_0);
         bookname = findViewById(R.id.textView2);
         bookwriter =findViewById(R.id.textView7);
-
+        img1 =findViewById(R.id.Click_img1);
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -128,6 +128,7 @@ public class bookImage extends AppCompatActivity {
                     {
                         bookname.setText(value.getData().get("bookname").toString());
                         bookwriter.setText(value.getData().get("bookwriter").toString());
+                        img1.setImageResource(R.drawable.book1);
                     }
                     // 데이터가 null 일때 null 데이터 표시 실시
                     else{
@@ -152,6 +153,7 @@ public class bookImage extends AppCompatActivity {
                     {
                         bookname.setText(value.getData().get("bookname").toString());
                         bookwriter.setText(value.getData().get("bookwriter").toString());
+                        img1.setImageResource(R.drawable.book2);
                     }
                     // 데이터가 null 일때 null 데이터 표시 실시
                     else{

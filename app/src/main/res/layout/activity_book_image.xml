@@ -30,6 +30,7 @@
                 android:layout_height="84dp"
                 android:layout_gravity="clip_horizontal|center|center_horizontal|center_vertical"
                 android:gravity="center_horizontal|center_vertical"
+                android:fontFamily="@font/mari"
                 android:text="BookMarK"
                 android:textColor="#040303"
                 android:textSize="50sp"
@@ -67,6 +68,7 @@
                     android:layout_width="138dp"
                     android:layout_height="43dp"
                     android:gravity="center_horizontal|center_vertical"
+                    android:fontFamily="@font/mari"
                     android:tag="r"
                     android:text="책이름:"
                     android:textColor="#000000"
@@ -76,6 +78,7 @@
                     android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="78dp"
+                    android:fontFamily="@font/mari"
                     android:gravity="center_horizontal|left|center_vertical"
                     android:hint="책이름"
                     android:textColor="#0C0C0C"
@@ -92,6 +95,7 @@
                     android:id="@+id/textView9"
                     android:layout_width="138dp"
                     android:layout_height="43dp"
+                    android:fontFamily="@font/mari"
                     android:gravity="center_horizontal|center_vertical"
                     android:text="저자:"
                     android:textColor="#040303"
@@ -103,6 +107,7 @@
                     android:layout_height="94dp"
                     android:gravity="center_horizontal|left|center_vertical"
                     android:hint="저자"
+                    android:fontFamily="@font/mari"
                     android:textColor="#0C0C0C"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -134,6 +139,7 @@
                     android:layout_marginTop="30dp"
                     android:background="@drawable/btn_custom"
                     android:text="다음단계"
+                    android:fontFamily="@font/mari"
                     android:textColor="#FAF6F6"
                     android:textSize="20sp"
                     android:visibility="visible" />

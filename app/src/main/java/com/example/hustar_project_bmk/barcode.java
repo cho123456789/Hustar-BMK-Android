@@ -47,9 +47,10 @@ public class barcode extends AppCompatActivity {
     // --------------------------------//
     Button back_btn,btnupload,btnnext;
     ImageView img1;
-    TextView upload_txt,bookname,bookwriter;
+    TextView barcodename;
     private Uri imageUri;
     ProgressBar dialog;
+
     // -------버튼 타입 설정-----------//
 
     // ----------------------------//
@@ -71,7 +72,8 @@ public class barcode extends AppCompatActivity {
         btnupload = findViewById(R.id.loadbtn);
         btnnext  = findViewById(R.id.nextbtn);
         dialog = findViewById(R.id.progressBar2);
-
+        barcodename = findViewById(R.id.barcodename);
+        barcodename.setText("바코드 촬영을 위해서 "+"\n"+"카메라 아이콘을 클릭해주세요");
         //-----------버튼 이벤트 설정-------------------//
 
         btnupload.setOnClickListener(new View.OnClickListener() {

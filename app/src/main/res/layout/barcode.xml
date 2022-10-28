@@ -36,11 +36,12 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/barcodename"
+                android:fontFamily="@font/mari"
                 android:layout_width="match_parent"
-                android:layout_height="49dp"
+                android:layout_height="64dp"
                 android:gravity="clip_horizontal|center_horizontal|center_vertical"
-                android:hint="바코드 촬영을 위해서 카메라 아이콘을 클릭해주세요"
+                android:lineSpacingMultiplier="1.5"
                 android:textSize="17sp" />
 
             <ImageView
@@ -51,18 +52,27 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginTop="50dp"
                 android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="56dp"
+                    android:layout_height="26dp" />
 
                 <ProgressBar
                     android:id="@+id/progressBar2"
                     style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="330dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="269dp"
+                    android:layout_height="27dp"
                     android:layout_weight="1"
                     android:progressDrawable="@drawable/pro_custom"
                     android:visibility="invisible" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_weight="1" />
             </LinearLayout>
 
         </LinearLayout>
@@ -100,6 +110,7 @@
                             android:layout_height="50dp"
                             android:layout_marginTop="10dp"
                             android:background="@drawable/btn_custom"
+                            android:fontFamily="@font/mari"
                             android:text="업로드"
                             android:textColor="#FAF6F6"
                             android:textSize="20sp"
@@ -129,6 +140,7 @@
                         android:layout_height="match_parent" />
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:fontFamily="@font/mari"
                         android:id="@+id/nextbtn"
                         android:layout_width="200dp"
                         android:layout_height="50dp"
