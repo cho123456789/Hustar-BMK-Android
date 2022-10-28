@@ -122,7 +122,6 @@ public class camera extends AppCompatActivity {
             Bitmap bitmap = BitmapFactory.decodeFile(imageFilePath);
             Bitmap resize = Bitmap.createScaledBitmap(bitmap, 720, 1280, true);
             ExifInterface exif = null;
-
             try {
                 exif = new ExifInterface(imageFilePath);
             } catch (IOException e) {
