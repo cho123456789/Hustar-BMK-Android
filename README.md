@@ -8,7 +8,7 @@ AI가 발전함에 따라 많은 곳에서 **자동화**가 진행되고 있으�
 개발 인원 : 총 4명 **(Android 2명 Yolov5 2명)**
 
 개발 구조:
-![제목을-입력해주세요_-011 (1)](https://github.com/user-attachments/assets/796de08d-aec1-4619-9aae-5dabddd34f00 width="300" height="300">) 
+![제목을-입력해주세요_-011 (1)](https://github.com/user-attachments/assets/796de08d-aec1-4619-9aae-5dabddd34f00 width="300" height="300") 
 
 
 개발 UI / UX 
