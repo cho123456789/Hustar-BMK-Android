@@ -13,7 +13,7 @@ AI가 발전함에 따라 많은 곳에서 **자동화**가 진행되고 있으�
 
 ## 개발 UI / UX 
 <img src="https://github.com/user-attachments/assets/17b6194b-3d52-4097-b2b3-f33c6788fbb3" alt="제목을 입력해주세요" width="400" height="300">
-<img src="https://github.com/user-attachments/assets/9bd6ad31-fcf4-4e95-b04d-06d08d4dfac8" alt="제목을 입력해주세요" width="450" height="300">
+<img src="https://github.com/user-attachments/assets/9bd6ad31-fcf4-4e95-b04d-06d08d4dfac8" alt="제목을 입력해주세요" width="500" height="300">
 <img src="https://github.com/user-attachments/assets/0005acf9-a04d-4d3a-b58b-4dcc471e96b3" alt="제목을 입력해주세요" width="700" height="300">
 
 
