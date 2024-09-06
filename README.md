@@ -17,3 +17,7 @@ AI가 발전함에 따라 많은 곳에서 **자동화**가 진행되고 있으�
 <img src="https://github.com/user-attachments/assets/0005acf9-a04d-4d3a-b58b-4dcc471e96b3" alt="제목을 입력해주세요" width="700" height="300">
 
 
+
+## 개발툴
+<img src="https://img.shields.io/badge/Android Studio-3DDC84?style=flat-square&logo=Android Studio&logoColor=white"/>
+- AngularJS
