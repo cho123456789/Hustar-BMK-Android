@@ -98,6 +98,18 @@ https://github.com/cho123456789/Hustar-BMK-Yolov5
   </tr>
 </table>
 
+## 트러블 슈팅 
+
+- **데이터셋 표본 부족** <br>
+      데이터 클래스 불균형으로 데이터 학습이 일정하지 않는 현상 발생 (찢어짐 ⇒ 긁힘으로 표시) <br>
+    => (roboflow 사이트를 이용하여 데이터 클래스 조정 및 라벨링을 통해서 데이터 셋 구축) <br>
+    ⇒ (찢어짐 : 316 개 , 얼룩 394개  닳음 : 670개 , 긁힘 282개  데이터 셋 확보) 
+
+- **학습률이 떨어지는 현상이 발생** <br>
+    사진 데이터가 저화질로 출력되어 디텍팅이 원활하지 않은 현상이 발생 <br>
+     ⇒   ( 안드로이드에서 Bitmap 통해서 사진 화질 개선) <br>
+     ⇒  (사용자가 보기 싶게  Zoom in 기능을 추가하여 훼손 데이터 확인 )
+
 ## 개발툴
 <img src="https://img.shields.io/badge/Android Studio-3DDC84?style=flat-square&logo=Android Studio&logoColor=white"/> <img src="https://img.shields.io/badge/java-007396?style=flat-square&logo=java&logoColor=white"/>
 <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=white"/>
