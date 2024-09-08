@@ -34,6 +34,8 @@
 
 ## 모델링 
 
+
+
 ## 패이지별 기능
 
 <table>
@@ -79,12 +81,18 @@
   </tr>
 </table>
 
-
-<img src="https://github.com/user-attachments/assets/17b6194b-3d52-4097-b2b3-f33c6788fbb3" alt="제목을 입력해주세요" width="400" height="300">
-<img src="https://github.com/user-attachments/assets/9bd6ad31-fcf4-4e95-b04d-06d08d4dfac8" alt="제목을 입력해주세요" width="600" height="300">
-<img src="https://github.com/user-attachments/assets/0005acf9-a04d-4d3a-b58b-4dcc471e96b3" alt="제목을 입력해주세요" width="700" height="300">
-
-
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/d68bca12-193f-413e-875a-081f070f8fa9" alt="splash" width="303"/></td>
+    <td>
+      <h3>책 훼손여부 파악</h3>
+      <ul>
+        <li>책 이미지를 통해서 훼손 여부에 대한 이미지 정보를 불러옵니다.</li>
+        <li><b>줌인기능</b>을 토대로 훼손여부를 파악합니다.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## 개발툴
 <img src="https://img.shields.io/badge/Android Studio-3DDC84?style=flat-square&logo=Android Studio&logoColor=white"/> <img src="https://img.shields.io/badge/java-007396?style=flat-square&logo=java&logoColor=white"/>
