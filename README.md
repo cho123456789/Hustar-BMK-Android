@@ -37,6 +37,9 @@
 ![image](https://github.com/user-attachments/assets/4b1ee16b-39b2-44a1-9ce0-89de0fd1661d)
 ![image](https://github.com/user-attachments/assets/8048473c-87e8-4caf-90ea-1a5e308e768c)
 
+## 학습코드 
+https://github.com/cho123456789/Hustar-BMK-Yolov5
+
 ## 패이지별 기능
 
 <table>
