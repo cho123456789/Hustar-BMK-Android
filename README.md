@@ -33,8 +33,9 @@
 - 기능 구현 : 2022-10-10 ~ 2022-11-04
 
 ## 모델링 
-
-
+- 데이터셋 구성
+![image](https://github.com/user-attachments/assets/4b1ee16b-39b2-44a1-9ce0-89de0fd1661d)
+![image](https://github.com/user-attachments/assets/8048473c-87e8-4caf-90ea-1a5e308e768c)
 
 ## 패이지별 기능
 
