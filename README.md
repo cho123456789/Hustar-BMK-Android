@@ -1,21 +1,22 @@
 # **도서훼손 판별 프로젝트**
+<img src="https://github.com/user-attachments/assets/b67cf068-bdc0-48e4-aa53-c522824307a7" alt ="무인파손시스템" width = "600" height="400">
 
 ## 개요
 
 AI가 발전함에 따라 많은 곳에서 **자동화**가 진행되고 있으며, 이에 따라 자동으로 **도서의 파손 상태를 확인**하여 사서의 **업무 부담**과 인력난을 **해소**하기 위한 서비스 제공을 위해서  **AI**활용하여 도서 대여 전,후의 **파손상태를 감지**하여 판정을 내려주는 시스템 구현
 
 개발 기간 : 2022. 09. 01 ~ 2022 11.01 </br>
+
 개발 인원 : 총 4명 **(Android 2명 Yolov5 2명)**
 </br>
 
 ## 개발 구조: 
 <img src="https://github.com/user-attachments/assets/796de08d-aec1-4619-9aae-5dabddd34f00" alt="제목을 입력해주세요" width="500" height="300">
 
-
-## 카메라 촬영 기능 
-
-
-
+## 개발 환경:
+- Front : Android Studio JAVA (target sdk 32 / mid sdk 21)
+- DB :  Firebase Storage
+- AI : Python (Yolov5)  
 
 
 ## 개발 UI / UX 
