@@ -4,11 +4,20 @@
 ## 프로젝트 소개
 - AI가 발전함에 따라 많은 곳에서 **자동화**가 진행되고 있으며, 이에 따라 자동으로 **도서의 파손 상태를 확인**
 - 사서의 **업무 부담**과 인력난을 **해소**하기 위해  **AI**활용하여 도서 대여 전,후의 **파손상태를 감지**하여 판정을 내려주는 시스템 구현
-
-개발 기간 : 2022. 09. 01 ~ 2022 11.01 </br>
-
-개발 인원 : 총 4명 **(Android 2명 Yolov5 2명)**
 </br>
+
+## 팀원 구성 & 역할
+<div align="center">
+
+
+| **김수겸** | **박성목** | **이지은** | **조형석** |
+| :------: |  :------: | :------: | :------: |
+| <img src="https://github.com/user-attachments/assets/e553fca2-ffae-421f-8e77-bed2e1a7bf32" height=150 width=150> <br/>  **AI** | <img src="https://github.com/user-attachments/assets/c1d237ad-1685-44a5-b476-b0da86dcdaef" height=150 width=150> <br/> **AI** |<img src="https://github.com/user-attachments/assets/0ce22f69-4444-4923-85c2-896217f7dcc5" height=150 width=150> <br/> **Android**| <img src="https://github.com/user-attachments/assets/5abd2834-0221-477f-a75e-ee580d22c1f0" height=150 width=150> <br/> **Android**|
+
+</div>
+
+<br>
+
 
 ## 개발 구조: 
 <img src="https://github.com/user-attachments/assets/796de08d-aec1-4619-9aae-5dabddd34f00" alt="제목을 입력해주세요" width="500" height="300">
