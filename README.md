@@ -34,6 +34,36 @@
 
 
 ## 패이지별 기능
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/d4ed2685-19f4-49de-9257-f39e5ea26b43" alt="splash" width="300"/></td>
+    <td>
+      <h3>초기화면</h3>
+      <ul>
+        <li>서비스 접속 초기화면으로 splash 화면이 잠시 나온 뒤 다음 페이지가 나타납니다.</li>
+        <li>사용자 정보를 넣고 <b>책반납버튼</b>을 누르면 반납이 시작됩니다</li>
+        <li>로그인 기능은 구현되어 있지 않습니다.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/d4ed2685-19f4-49de-9257-f39e5ea26b43" alt="splash" width="300"/></td>
+    <td>
+      <h3>초기화면</h3>
+      <ul>
+        <li>서비스 접속 초기화면으로 splash 화면이 잠시 나온 뒤 다음 페이지가 나타납니다.</li>
+        <li>사용자 정보를 넣고 <b>책반납버튼</b>을 누르면 반납이 시작됩니다</li>
+        <li>로그인 기능은 구현되어 있지 않습니다.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+
 <img src="https://github.com/user-attachments/assets/17b6194b-3d52-4097-b2b3-f33c6788fbb3" alt="제목을 입력해주세요" width="400" height="300">
 <img src="https://github.com/user-attachments/assets/9bd6ad31-fcf4-4e95-b04d-06d08d4dfac8" alt="제목을 입력해주세요" width="600" height="300">
 <img src="https://github.com/user-attachments/assets/0005acf9-a04d-4d3a-b58b-4dcc471e96b3" alt="제목을 입력해주세요" width="700" height="300">
