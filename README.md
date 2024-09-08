@@ -15,12 +15,12 @@
 | <img src="https://github.com/user-attachments/assets/e553fca2-ffae-421f-8e77-bed2e1a7bf32" height=150 width=150> <br/>  **AI** | <img src="https://github.com/user-attachments/assets/c1d237ad-1685-44a5-b476-b0da86dcdaef" height=150 width=150> <br/> **AI** |<img src="https://github.com/user-attachments/assets/0ce22f69-4444-4923-85c2-896217f7dcc5" height=150 width=150> <br/> **Android**| <img src="https://github.com/user-attachments/assets/5abd2834-0221-477f-a75e-ee580d22c1f0" height=150 width=150> <br/> **Android**|
 
 </div>
-
 <br>
 
-
-## 개발 구조: 
-<img src="https://github.com/user-attachments/assets/796de08d-aec1-4619-9aae-5dabddd34f00" alt="제목을 입력해주세요" width="500" height="300">
+## 개발 구조
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/796de08d-aec1-4619-9aae-5dabddd34f00" alt="제목을 입력해주세요" width="700" height="300">
+</div>
 
 ## 개발 환경:
 - Front : Android Studio JAVA (target sdk 32 / mid sdk 21)
