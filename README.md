@@ -25,15 +25,18 @@
 ## 개발 환경:
 - Front : Android Studio JAVA (target sdk 32 / mid sdk 21)
 - DB :  Firebase Storage
-- AI : Python (Yolov5)  
+- AI : Python (Yolov5)
+
+## 개발 기간 
+- 전체 개발 기간 : 2022-10-05 ~ 2022-11-05
+- 회의 :  2022-10-11 ~ 2022-10-29 ((주)디월드 전무이사님 멘토링) 
+- 기능 구현 : 2022-10-10 ~ 2022-11-04
 
 
-## 개발 UI / UX 
+## 패이지별 기능
 <img src="https://github.com/user-attachments/assets/17b6194b-3d52-4097-b2b3-f33c6788fbb3" alt="제목을 입력해주세요" width="400" height="300">
 <img src="https://github.com/user-attachments/assets/9bd6ad31-fcf4-4e95-b04d-06d08d4dfac8" alt="제목을 입력해주세요" width="600" height="300">
 <img src="https://github.com/user-attachments/assets/0005acf9-a04d-4d3a-b58b-4dcc471e96b3" alt="제목을 입력해주세요" width="700" height="300">
-
-
 
 
 
