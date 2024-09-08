@@ -12,7 +12,7 @@
 
 | **김수겸** | **박성목** | **이지은** | **조형석** |
 | :------: |  :------: | :------: | :------: |
-| <img src="https://github.com/user-attachments/assets/e553fca2-ffae-421f-8e77-bed2e1a7bf32" height=150 width=150> <br/>  **AI** | <img src="https://github.com/user-attachments/assets/c1d237ad-1685-44a5-b476-b0da86dcdaef" height=150 width=150> <br/> **AI** |<img src="https://github.com/user-attachments/assets/0ce22f69-4444-4923-85c2-896217f7dcc5" height=150 width=150> <br/> **Android**| <img src="https://github.com/user-attachments/assets/5abd2834-0221-477f-a75e-ee580d22c1f0" height=150 width=150> <br/> **Android**|
+| <img src="https://github.com/user-attachments/assets/e553fca2-ffae-421f-8e77-bed2e1a7bf32" height=150 width=150> <br/>  **AI모델링** | <img src="https://github.com/user-attachments/assets/c1d237ad-1685-44a5-b476-b0da86dcdaef" height=150 width=150> <br/> **AI모델링** |<img src="https://github.com/user-attachments/assets/0ce22f69-4444-4923-85c2-896217f7dcc5" height=150 width=150> <br/> **Android**| <img src="https://github.com/user-attachments/assets/5abd2834-0221-477f-a75e-ee580d22c1f0" height=150 width=150> <br/> **Android**|
 
 </div>
 <br>
@@ -32,6 +32,7 @@
 - 회의 :  2022-10-11 ~ 2022-10-29 ((주)디월드 전무이사님 멘토링) 
 - 기능 구현 : 2022-10-10 ~ 2022-11-04
 
+## 모델링 
 
 ## 패이지별 기능
 
@@ -41,7 +42,7 @@
     <td>
       <h3>초기화면</h3>
       <ul>
-        <li>서비스 접속 초기화면으로 splash 화면이 잠시 나온 뒤 다음 페이지가 나타납니다.</li>
+        <li>splash 화면이 잠시 나온 뒤 다음 페이지가 나타납니다.</li>
         <li>사용자 정보를 넣고 <b>책반납버튼</b>을 누르면 반납이 시작됩니다</li>
         <li>로그인 기능은 구현되어 있지 않습니다.</li>
       </ul>
@@ -49,15 +50,30 @@
   </tr>
 </table>
 
+
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/d4ed2685-19f4-49de-9257-f39e5ea26b43" alt="splash" width="300"/></td>
+    <td><img src="https://github.com/user-attachments/assets/8cf62ff1-6661-40b6-9690-ecaafc93123c" alt="splash" width="300"/></td>
     <td>
-      <h3>초기화면</h3>
+      <h3>바코드스캔</h3>
       <ul>
-        <li>서비스 접속 초기화면으로 splash 화면이 잠시 나온 뒤 다음 페이지가 나타납니다.</li>
-        <li>사용자 정보를 넣고 <b>책반납버튼</b>을 누르면 반납이 시작됩니다</li>
-        <li>로그인 기능은 구현되어 있지 않습니다.</li>
+        <li>카메라 촬영버튼을 통해서 책에 있는 바코드를 스캔합니다</li>
+        <li><b>업로드 버튼</b>을 통해 바코드에 있는 책에 대한 정보를 불러옵니다</li>
+        <li>바코드 인식 개선 문제로 숫자로 대체하였습니다.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/20b6d594-4bba-44a3-936a-4a5c99cf281e" alt="splash" width="303"/></td>
+    <td>
+      <h3>책 촬영</h3>
+      <ul>
+        <li>카메라 촬영버튼을 통해서 책을 스캔합니다.</li>
+        <li><b>업로드 버튼</b>을 통해서 책의 이미지정보를 전송합니다.</li>
+        <li>이미지 정보를 학습이 완료된 Yolov5모델에 테스트를 진행합니다.</li>
       </ul>
     </td>
   </tr>
