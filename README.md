@@ -10,7 +10,7 @@
 <div align="center">
 
 
-| **김수겸** | **박성목** | **이지은** | **조형석** |
+| **김수겸** | **박성목** | **이지은** | **나** |
 | :------: |  :------: | :------: | :------: |
 | <img src="https://github.com/user-attachments/assets/e553fca2-ffae-421f-8e77-bed2e1a7bf32" height=150 width=150> <br/>  **AI모델링** | <img src="https://github.com/user-attachments/assets/c1d237ad-1685-44a5-b476-b0da86dcdaef" height=150 width=150> <br/> **AI모델링** |<img src="https://github.com/user-attachments/assets/0ce22f69-4444-4923-85c2-896217f7dcc5" height=150 width=150> <br/> **Android**| <img src="https://github.com/user-attachments/assets/5abd2834-0221-477f-a75e-ee580d22c1f0" height=150 width=150> <br/> **Android**|
 
